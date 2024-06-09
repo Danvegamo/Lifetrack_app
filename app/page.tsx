@@ -20,8 +20,8 @@ const Home: FC<HomeProps> = async ({ searchParams }) => {
   if (!listings || listings.length === 0) {
     return (
       <EmptyState
-        title="No Listings found"
-        subtitle="Looks like you have no properties."
+        title="No se encontraron propiedades"
+        subtitle="Parece que no tienes ninguna propiedad."
       />
     );
   }

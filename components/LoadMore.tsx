@@ -78,7 +78,7 @@ const LoadMore: FC<LoadMoreProps> = ({
       )}
       {status === "error" && (
         <p className="text-xl mt-8 text-center font-semibold">
-          Something went wrong!
+          ¡Algo salió mal!
         </p>
       )}
       <div ref={ref} />

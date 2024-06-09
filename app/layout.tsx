@@ -10,7 +10,7 @@ const nunito = Nunito({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "VacationHub",
   description:
-    "Your Ultimate Destination Connection. Discover a world of endless possibilities and seamless vacation planning at VacationHub.",
+    "Tu conexión definitiva de destinos vacacionales. Descubre un mundo de posibilidades infinitas y una planificación de vacaciones sin problemas en VacationHub.",
 };
 
 export default function RootLayout({

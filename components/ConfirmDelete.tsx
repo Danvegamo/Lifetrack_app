@@ -5,19 +5,19 @@ import SpinnerMini from "./Loader";
 
 interface ConfirmDeleteProps {
   title: string;
-  onConfirm: (fn?: () => void) => void;
+  onConfirmar: (fn?: () => void) => void;
   onCloseModal?: () => void;
   isLoading?: boolean;
 }
 
 const ConfirmDelete: React.FC<ConfirmDeleteProps> = ({
   title,
-  onConfirm,
+  onConfirmar,
   onCloseModal,
   isLoading = false,
 }) => {
   const onAction = () => {
-    onConfirm(onCloseModal);
+    onConfirmar(onCloseModal);
   };
 
   return (
@@ -31,15 +31,15 @@ const ConfirmDelete: React.FC<ConfirmDeleteProps> = ({
       </button>
       <h1 className="text-[22px] font-bold text-gray-800">{title}</h1>
       <p className="text-gray-700  text-[16px] leading-[1.6] mb-4">
-        Are you sure you want to do this? It can&apos;t be undone.
+        ¿Estás seguro de que quieres hacer esto? No se puede deshacer.
       </p>
 
       <div className="flex items-center gap-3 mt-1 h-[40px]">
         <Button onClick={() => onCloseModal?.()} className="h-full" outline>
-          Cancel
+          Cancelar
         </Button>
         <Button onClick={onAction} className="h-full flex items-center justify-center">
-          {isLoading ? <SpinnerMini  /> : <span> Confirm</span>}
+          {isLoading ? <SpinnerMini  /> : <span> Confirmar</span>}
         </Button>
       </div>
     </div>

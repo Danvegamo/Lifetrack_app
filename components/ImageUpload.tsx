@@ -89,7 +89,7 @@ const ImageUpload: FC<ImageUploadProps> = ({ onChange, initialImage = "" }) => {
       ) : (
         <>
           <TbPhotoPlus className="!w-[64px] !h-[64px] mb-4" />
-          <span className="font-semibold text-lg">Upload image</span>
+          <span className="font-semibold text-lg">Subir imagen</span>
         </>
       )}
       <input

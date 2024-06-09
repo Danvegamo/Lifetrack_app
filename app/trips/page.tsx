@@ -14,7 +14,7 @@ const TripsPage = async () => {
   const favorites = await getFavorites();
 
   if (!user) {
-    return <EmptyState title="Unauthorized" subtitle="Please login" />;
+    return <EmptyState title="No autorizado" subtitle="Por favor, inicia sesión" />;
   }
 
   const { listings, nextCursor } = await getReservations({ userId: user.id });
@@ -22,8 +22,8 @@ const TripsPage = async () => {
   if (listings.length === 0) {
     return (
       <EmptyState
-        title="No trips found"
-        subtitle="Looks like you haven't reserved any trips."
+        title="No se encontraron viajes"
+        subtitle="Parece que no has reservado ningún viaje."
       />
     );
   }
@@ -31,8 +31,8 @@ const TripsPage = async () => {
   return (
     <section className="main-container">
       <Heading
-        title="Trips"
-        subtitle="Where you've been and where you're going."
+        title="Viajes"
+        subtitle="Donde has estado y a donde vas."
         backBtn
       />
       <div className=" mt-8 md:mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 md:gap-8 gap-4">

@@ -54,7 +54,7 @@ const AuthModal = ({
   }, [isLoginModal, setFocus]);
 
   const onToggle = () => {
-    const newTitle = isLoginModal ? "Sign up" : "Login";
+    const newTitle = isLoginModal ? "Registrarse" : "Iniciar sesión";
     setTitle(newTitle);
     reset();
   };
@@ -75,14 +75,14 @@ const AuthModal = ({
             throw new Error(callback.error);
           }
           if (callback?.ok) {
-            toast.success("You've successfully logged in.");
+            toast.success("Has iniciado sesión correctamente.");
             onCloseModal?.();
             router.refresh();
           }
         } else {
           await registerUser({ email, password, name });
-          setTitle("Login");
-          toast.success("You've successfully registered.");
+          setTitle("Iniciar sesión");
+          toast.success("Te has registrado correctamente.");
           reset();
         }
       } catch (error: any) {
@@ -108,18 +108,18 @@ const AuthModal = ({
         onSubmit={handleSubmit(onSubmit)}
       >
         <Heading
-          title={!isLoginModal ? "Welcome to Airbnb" : "Welcome back"}
+          title={!isLoginModal ? "Bienvenido a LifeTrack" : "Bienvenido de vuelta"}
           subtitle={
-            title === "Sign up"
-              ? "Create an account!"
-              : "Login to your account!"
+            title === "Registrarse"
+              ? "¡Crea una cuenta!"
+              : "¡Inicia sesión en tu cuenta!"
           }
         />
 
         {!isLoginModal && (
           <Input
             id="name"
-            label="Name"
+            label="Nombre"
             disabled={isLoading}
             register={register}
             errors={errors}
@@ -130,7 +130,7 @@ const AuthModal = ({
 
         <Input
           id="email"
-          label="Email"
+          label="Correo electrónico"
           disabled={isLoading}
           register={register}
           errors={errors}
@@ -140,7 +140,7 @@ const AuthModal = ({
 
         <Input
           id="password"
-          label="Password"
+          label="Contraseña"
           type="password"
           disabled={isLoading}
           register={register}
@@ -153,7 +153,7 @@ const AuthModal = ({
           type="submit"
           className="flex items-center justify-center h-[42px]"
         >
-          {isLoading ? <SpinnerMini className="w-5 h-5" /> : "Continue"}
+          {isLoading ? <SpinnerMini className="w-5 h-5" /> : "Continuar"}
         </Button>
       </form>
       <div className="flex flex-col gap-4 mt-3 p-6 pt-0">
@@ -164,7 +164,7 @@ const AuthModal = ({
           className="flex flex-row justify-center gap-2 items-center px-3 py-2"
         >
           <FcGoogle className="w-6 h-6" />
-          <span className="text-[14px]">Continue with Google</span>
+          <span className="text-[14px]">Continuar con Google</span>
         </Button>
         <Button
           outline
@@ -172,7 +172,7 @@ const AuthModal = ({
           className="flex flex-row justify-center gap-2 items-center px-3 py-2"
         >
           <AiFillGithub className="w-6 h-6" />
-          <span className="text-[14px]">Continue with Github</span>
+          <span className="text-[14px]">Continuar con Github</span>
         </Button>
         <div
           className="
@@ -185,8 +185,8 @@ const AuthModal = ({
           <div className="text-[15px]">
             <small className="text-[15px]">
               {!isLoginModal
-                ? "Already have an account?"
-                : "First time using Airbnb?"}
+                ? "¿Ya tienes una cuenta?"
+                : "¿Es la primera vez que usas LifeTrack?"}
             </small>
             <button
               type="button"
@@ -199,7 +199,7 @@ const AuthModal = ({
               font-medium
               "
             >
-              {!isLoginModal ? "Log in" : "Create an account"}
+              {!isLoginModal ? "Iniciar sesión" : "Crear una cuenta"}
             </button>
           </div>
         </div>

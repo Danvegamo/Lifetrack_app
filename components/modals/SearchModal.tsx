@@ -117,8 +117,8 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-3">
             <Heading
-              title="When do you plan to go?"
-              subtitle="Make sure everyone is free!"
+              title="¿Cuándo planeas ir?"
+              subtitle="¡Asegúrate de que todos estén libres!"
             />
             <div className="h-[348px] w-full">
               <Calendar onChange={setCustomValue} value={dateRange} />
@@ -130,12 +130,12 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-6">
             <Heading
-              title="More information"
-              subtitle="Find your perfect place!"
+              title="Más información"
+              subtitle="¡Encuentra tu lugar perfecto!"
             />
             <Counter
-              title="Guests"
-              subtitle="How many guests do you allow?"
+              title="Huéspedes"
+              subtitle="¿Cuántos huéspedes permites?"
               watch={watch}
               onChange={setCustomValue}
               name="guestCount"
@@ -144,16 +144,16 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
             <Counter
               onChange={setCustomValue}
               watch={watch}
-              title="Rooms"
-              subtitle="How many rooms do you have?"
+              title="Habitaciones"
+              subtitle="¿Cuántas habitaciones tienes?"
               name="roomCount"
             />
             <hr />
             <Counter
               onChange={setCustomValue}
               watch={watch}
-              title="Bathrooms"
-              subtitle="How many bathrooms do you have?"
+              title="Baños"
+              subtitle="¿Cuántos baños tienes?"
               name="bathroomCount"
             />
           </div>
@@ -163,8 +163,8 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-4">
             <Heading
-              title="Where is your place located?"
-              subtitle="Help guests find you!"
+              title="¿Dónde se encuentra tu lugar?"
+              subtitle="¡Ayuda a los huéspedes a encontrarte!"
             />
             <CountrySelect value={location} onChange={setCustomValue} />
             <div className="h-[240px]">
@@ -179,7 +179,7 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
 
   return (
     <div className="h-full w-full bg-white flex flex-col">
-      <Modal.WindowHeader title="Filter" />
+      <Modal.WindowHeader title="Filtro" />
       <form
         className="h-auto flex-1 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none "
         onSubmit={handleSubmit(onSubmit)}
@@ -194,7 +194,7 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
                 onClick={onBack}
                 outline
               >
-                Back
+                Atrás
               </Button>
             ) : null}
             <Button
@@ -202,7 +202,7 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
               className="flex items-center gap-2 justify-center"
               disabled={!isFieldFilled}
             >
-              {step === STEPS.INFO ? "Search" : "Next"}
+              {step === STEPS.INFO ? "Buscar" : "Siguiente"}
             </Button>
           </div>
         </div>

@@ -14,81 +14,66 @@ import { BsSnow } from "react-icons/bs";
 import { IoDiamond } from "react-icons/io5";
 import { MdOutlineVilla } from "react-icons/md";
 
+import { FaRunning, FaSpa, FaDumbbell, FaMountain, FaLeaf } from "react-icons/fa";
+import { GiMeditation, GiFruitBowl, GiCycling } from "react-icons/gi";
+import { GrYoga } from "react-icons/gr";
+import { MdOutlineSportsHandball, MdOutlineLocalGroceryStore } from "react-icons/md";
+
 export const categories = [
   {
-    label: "Playa",
-    icon: TbBeach,
-    description: "¡Esta propiedad está cerca de la playa!",
+    label: "Actividades Físicas",
+    icon: FaRunning,
+    description: "¡Descubre actividades físicas para mantenerte en forma!",
   },
   {
-    label: "Molinos de viento",
-    icon: GiWindmill,
-    description: "¡Esta propiedad tiene molinos de viento!",
+    label: "Meditación",
+    icon: GiMeditation,
+    description: "¡Encuentra sesiones de meditación para tu bienestar mental!",
   },
   {
-    label: "Moderno",
-    icon: MdOutlineVilla,
-    description: "¡Esta propiedad es moderna!",
+    label: "Ciclismo",
+    icon: GiCycling,
+    description: "¡Explora rutas y actividades de ciclismo!",
   },
   {
-    label: "Campo",
-    icon: TbMountain,
-    description: "¡Esta propiedad está en el campo!",
+    label: "Gimnasio",
+    icon: FaDumbbell,
+    description: "¡Accede a los mejores gimnasios de la ciudad!",
   },
   {
-    label: "Piscinas",
-    icon: TbPool,
-    description: "¡Esta propiedad tiene una hermosa piscina!",
+    label: "Yoga",
+    icon: GrYoga,
+    description: "¡Participa en clases de yoga para relajarte y fortalecer tu cuerpo!",
   },
   {
-    label: "Islas",
-    icon: GiIsland,
-    description: "¡Esta propiedad está en una isla!",
+    label: "Senderismo",
+    icon: FaMountain,
+    description: "¡Descubre rutas de senderismo en Bogotá!",
   },
   {
-    label: "Lago",
-    icon: GiBoatFishing,
-    description: "¡Esta propiedad está cerca de un lago!",
+    label: "Nutrición",
+    icon: GiFruitBowl,
+    description: "¡Encuentra asesoramiento nutricional y dietas saludables!",
   },
   {
-    label: "Esquí",
-    icon: FaSkiing,
-    description: "¡Esta propiedad tiene actividades de esquí!",
+    label: "Deportes en Equipo",
+    icon: MdOutlineSportsHandball,
+    description: "¡Únete a actividades deportivas en equipo!",
   },
   {
-    label: "Castillos",
-    icon: GiCastle,
-    description: "¡Esta propiedad es un castillo antiguo!",
+    label: "Spa y Relajación",
+    icon: FaSpa,
+    description: "¡Disfruta de spas y actividades de relajación!",
   },
   {
-    label: "Cuevas",
-    icon: GiCaveEntrance,
-    description: "¡Esta propiedad está en una cueva espeluznante!",
+    label: "Naturaleza",
+    icon: FaLeaf,
+    description: "¡Conéctate con la naturaleza en actividades al aire libre!",
   },
   {
-    label: "Camping",
-    icon: GiForestCamp,
-    description: "¡Esta propiedad ofrece actividades de camping!",
-  },
-  {
-    label: "Ártico",
-    icon: BsSnow,
-    description: "¡Esta propiedad está en un entorno ártico!",
-  },
-  {
-    label: "Desierto",
-    icon: GiCactus,
-    description: "¡Esta propiedad está en el desierto!",
-  },
-  {
-    label: "Granero",
-    icon: GiBarn,
-    description: "¡Esta propiedad está en un granero!",
-  },
-  {
-    label: "Lujo",
-    icon: IoDiamond,
-    description: "¡Esta propiedad es nueva y lujosa!",
+    label: "Compras Saludables",
+    icon: MdOutlineLocalGroceryStore,
+    description: "¡Encuentra los mejores lugares para comprar productos saludables!",
   },
 ];
 
@@ -96,19 +81,19 @@ export const LISTINGS_BATCH = 16;
 
 export const menuItems = [
   {
-    label: "My trips",
+    label: "Mis actividades",
     path: "/trips",
   },
   {
-    label: "My favorites",
+    label: "Mis favoritos",
     path: "/favorites",
   },
   {
-    label: "My reservations",
+    label: "Mis reservas",
     path: "/reservations",
   },
   {
-    label: "My properties",
+    label: "Mis propiedades",
     path: "/properties",
   },
 ];

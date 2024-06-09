@@ -20,16 +20,16 @@ export const authOptions: AuthOptions = {
     CredentialsProvider({
       name: "credentials",
       credentials: {
-        email: { label: "email", type: "text" },
+        email: { label: "correo electrónico", type: "text" },
         password: {
-          label: "password",
+          label: "contraseña",
           type: "password",
         },
       },
 
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error("Invalid credentials");
+          throw new Error("Credenciales inválidas");
         }
 
         const user = await db.user.findUnique({
@@ -38,14 +38,14 @@ export const authOptions: AuthOptions = {
           },
         });
 
-        if (!user || !user?.password) throw new Error("Invalid credentials");
+        if (!user || !user?.password) throw new Error("Credenciales inválidas");
 
         const isCorrectPassword = await bcrypt.compare(
           credentials.password,
           user.password
         );
 
-        if (!isCorrectPassword) throw new Error("Invalid credentials");
+        if (!isCorrectPassword) throw new Error("Credenciales inválidas");
 
         return user;
       },

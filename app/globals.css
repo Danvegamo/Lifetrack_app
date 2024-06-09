@@ -29,6 +29,10 @@ body {
   inline-size: 100%;
 }
 
+.bg-custom {
+  background-color: #e9f8f7;
+}
+
 .main-container {
   @apply max-w-[1140px] mx-auto xl:px-0 px-4;
 }

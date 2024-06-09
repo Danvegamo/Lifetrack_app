@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import Search from "./Search";
 import Categories from "./Categories";
 import UserMenu from "./UserMenu";
+import Link from "next/link";
 import { getCurrentUser } from "@/services/user";
 
 interface NavbarProps {}
@@ -18,7 +19,12 @@ const Navbar: React.FC<NavbarProps> = async () => {
           <Suspense fallback={<></>}>
             <Search />
           </Suspense>
-          <UserMenu user={user} />
+          <div className="flex items-center space-x-4">
+            <Link href="/landing" legacyBehavior>
+              <a className="text-gray-700 hover:text-blue-600">Landing Page</a>
+            </Link>
+            <UserMenu user={user} />
+          </div>
         </div>
       </nav>
       <Categories />

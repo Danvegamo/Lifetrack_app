@@ -8,9 +8,9 @@ import Providers from "@/components/Provider";
 const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VacationHub",
+  title: "LifeTrack - Encuentra tu estilo de vida saludable en Bogotá",
   description:
-    "Tu conexión definitiva de destinos vacacionales. Descubre un mundo de posibilidades infinitas y una planificación de vacaciones sin problemas en VacationHub.",
+    "Descubre cientos de actividades de bienestar para probar y nuevos productos de hábitos para llevar una vida saludable.",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={nunito.className}>
         <Providers>
           <Navbar />

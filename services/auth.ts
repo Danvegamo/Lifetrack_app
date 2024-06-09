@@ -13,7 +13,7 @@ export const registerUser = async ({
 }) => {
   try {
     if (!name || !email || !inputPassword)
-      throw new Error("Please provide all credentials");
+      throw new Error("Por favor proporciona todas las credenciales");
     const hashedPassword = await bcrypt.hash(inputPassword, 12);
 
     const user = await db.user.create({

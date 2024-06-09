@@ -9,24 +9,21 @@ import { formatISO } from "date-fns";
 import Modal from "./Modal";
 import Button from "../Button";
 import Heading from "../Heading";
-import Counter from "../inputs/Counter";
-import CountrySelect from "../inputs/CountrySelect";
+import SectorSelect from "../inputs/SectorSelect";
 
 const Calendar = dynamic(() => import("@/components/Calender"), { ssr: false });
 
 const steps = {
   "0": "location",
   "1": "dateRange",
-  "2": "guestCount",
 };
 
 enum STEPS {
   LOCATION = 0,
   DATE = 1,
-  INFO = 2,
 }
 
-const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
+const SearchModal = ({ onCloseModal, onSectorChange, sectors }: { onCloseModal?: () => void, onSectorChange: (value: string) => void, sectors: any[] }) => {
   const [step, setStep] = useState(STEPS.LOCATION);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -34,9 +31,6 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
   const { handleSubmit, setValue, watch, getValues } = useForm<FieldValues>({
     defaultValues: {
       location: null,
-      guestCount: 1,
-      bathroomCount: 1,
-      roomCount: 1,
       dateRange: {
         startDate: new Date(),
         endDate: new Date(),
@@ -47,15 +41,14 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
 
   const location = watch("location");
   const dateRange = watch("dateRange");
-  const country = location?.label;
+  const sector = location?.label;
 
   const Map = useMemo(
     () =>
       dynamic(() => import("../Map"), {
         ssr: false,
       }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [country]
+    [sector]
   );
 
   const setCustomValue = (id: string, value: any) => {
@@ -64,6 +57,9 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
       shouldTouch: true,
       shouldValidate: true,
     });
+    if (id === "location") {
+      onSectorChange(value?.value);
+    }
   };
 
   const onBack = () => {
@@ -75,8 +71,8 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
   };
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    if (step !== STEPS.INFO) return onNext();
-    const { guestCount, roomCount, bathroomCount, dateRange } = data;
+    if (step !== STEPS.DATE) return onNext();
+    const { dateRange } = data;
 
     let currentQuery = {};
 
@@ -86,10 +82,7 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
 
     const updatedQuery: any = {
       ...currentQuery,
-      country: location?.label,
-      guestCount,
-      roomCount,
-      bathroomCount,
+      sector: location?.label,
     };
 
     if (dateRange.startDate) {
@@ -126,39 +119,6 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
           </div>
         );
 
-      case STEPS.INFO:
-        return (
-          <div className="flex flex-col gap-6">
-            <Heading
-              title="Más información"
-              subtitle="¡Encuentra tu lugar perfecto!"
-            />
-            <Counter
-              title="Huéspedes"
-              subtitle="¿Cuántos huéspedes permites?"
-              watch={watch}
-              onChange={setCustomValue}
-              name="guestCount"
-            />
-            <hr />
-            <Counter
-              onChange={setCustomValue}
-              watch={watch}
-              title="Habitaciones"
-              subtitle="¿Cuántas habitaciones tienes?"
-              name="roomCount"
-            />
-            <hr />
-            <Counter
-              onChange={setCustomValue}
-              watch={watch}
-              title="Baños"
-              subtitle="¿Cuántos baños tienes?"
-              name="bathroomCount"
-            />
-          </div>
-        );
-
       default:
         return (
           <div className="flex flex-col gap-4">
@@ -166,7 +126,7 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
               title="¿Dónde se encuentra tu lugar?"
               subtitle="¡Ayuda a los huéspedes a encontrarte!"
             />
-            <CountrySelect value={location} onChange={setCustomValue} />
+            <SectorSelect value={location} onChange={setCustomValue} options={sectors} />
             <div className="h-[240px]">
               <Map center={location?.latlng} />
             </div>
@@ -202,7 +162,7 @@ const SearchModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
               className="flex items-center gap-2 justify-center"
               disabled={!isFieldFilled}
             >
-              {step === STEPS.INFO ? "Buscar" : "Siguiente"}
+              {step === STEPS.DATE ? "Buscar" : "Siguiente"}
             </Button>
           </div>
         </div>

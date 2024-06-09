@@ -82,12 +82,12 @@ export const createReservation = async ({
 }) => {
   try {
     if (!listingId || !startDate || !endDate || !totalPrice)
-      throw new Error("Invalid data");
+      throw new Error("Datos inválidos");
 
     const user = await getCurrentUser();
 
     if (!user) {
-      throw new Error("Please log in to reserve!");
+      throw new Error("Por favor inicia sesión para reservar!");
     }
 
     await db.listing.update({

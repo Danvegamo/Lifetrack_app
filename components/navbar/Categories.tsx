@@ -5,6 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import throttle from "lodash.throttle";
 import "swiper/css";
+import { IconType } from "react-icons";
 
 import CategoryBox from "./CategoryBox";
 import { categories } from "@/utils/constants";
@@ -50,7 +51,7 @@ const Categories = () => {
         }}
         className="main-container mt-2 lg:!px-3 !px-2"
       >
-        {categories.map((item: Category) => (
+        {categories.map((item: { label: string; icon: IconType }) => (
           <SwiperSlide className="max-w-fit" key={item.label}>
             <CategoryBox
               label={item.label}

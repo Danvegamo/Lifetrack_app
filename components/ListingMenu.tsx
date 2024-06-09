@@ -69,6 +69,7 @@ const ListingMenu: FC<ListingMenuProps> = ({ id }) => {
           <button
             type="button"
             className="w-7 h-7 rounded-full bg-neutral-700/50 flex items-center justify-center hover:bg-neutral-700/70 group transition duration-200 z-[5]"
+            title="Más opciones"
           >
             <BsThreeDots className="h-[18px] w-[18px] text-gray-300 transition duration-100 group-hover:text-gray-100 " />
           </button>
@@ -83,7 +84,7 @@ const ListingMenu: FC<ListingMenuProps> = ({ id }) => {
       </Menu>
       <Modal.Window name="confirm-delete">
         <ConfirmDelete
-          onConfirm={onConfirm}
+          onConfirmar={onConfirm}
           title={pathNameDict[pathname]}
           isLoading={isLoading}
         />

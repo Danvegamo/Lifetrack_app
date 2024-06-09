@@ -26,6 +26,7 @@ const ConfirmDelete: React.FC<ConfirmDeleteProps> = ({
         type="button"
         className=" p-1 border-0  hover:opacity-70 transition absolute right-3 top-3"
         onClick={() => onCloseModal?.()}
+        aria-label="Cerrar"
       >
         <IoMdClose size={20} />
       </button>

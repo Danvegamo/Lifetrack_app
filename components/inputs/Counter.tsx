@@ -41,6 +41,7 @@ const Counter: React.FC<CounterProps> = ({
           onClick={onReduce}
           className=" w-8 h-8 rounded-full border-[1px]  border-neutral-400 flex
           items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80  transition"
+          title="Reduce"
         >
           <AiOutlineMinus />
         </button>
@@ -51,6 +52,7 @@ const Counter: React.FC<CounterProps> = ({
           onClick={onAdd}
           className=" w-8 h-8 rounded-full border-[1px] border-neutral-400 flex items-center justify-center  text-neutral-600 cursor-pointer hover:opacity-80 transition"
           autoFocus={title === "Guests"}
+          title="Añadir"
         >
           <AiOutlinePlus />
         </button>

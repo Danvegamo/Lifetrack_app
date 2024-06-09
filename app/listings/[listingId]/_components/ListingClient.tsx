@@ -81,7 +81,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
   }, [dateRange.endDate, dateRange.startDate, price]);
 
   const onCreateReservation = () => {
-    if (!user) return toast.error("Please log in to reserve listing.");
+    if (!user) return toast.error("Por favor inicia sesión para reservar el alojamiento.");
     startTransition(async () => {
       try {
         const { endDate, startDate } = dateRange;
@@ -92,7 +92,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
           totalPrice,
         });
         router.push("/trips");
-        toast.success(`You've successfully reserved "${title}".`);
+        toast.success(`Has reservado "${title}" exitosamente.`);
         queryClient.invalidateQueries(["trips", user.id]);
         queryClient.invalidateQueries(["reservations", user.id]);
       } catch (error: any) {

@@ -61,6 +61,7 @@ const HeartButton: React.FC<HeartButtonProps> = ({
       type="button"
       onClick={handleClick}
       className=" relative hover:opacity-80 transition cursor-pointer z-[5] "
+      title="Favorite"
     >
       <AiOutlineHeart
         size={28}

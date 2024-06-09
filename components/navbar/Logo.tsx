@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href="/" className="h-[35px] w-[150px] relative hidden md:block ">
+    <Link href="/" className="h-[150px] w-[150px] relative hidden md:block ">
       <Image
-        src="/images/vacationhub.png"
+        src="/images/Logo.png"
         alt="logo"
         fill
         sizes="150px"

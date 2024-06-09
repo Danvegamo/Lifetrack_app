@@ -14,7 +14,7 @@ const PropertiesPage = async () => {
   const favorites = await getFavorites();
 
   if (!user) {
-    return <EmptyState title="Unauthorized" subtitle="Please login" />;
+    return <EmptyState title="No autorizado" subtitle="Por favor, inicia sesión" />;
   }
 
   const { listings, nextCursor } = await getProperties({ userId: user.id });
@@ -22,17 +22,17 @@ const PropertiesPage = async () => {
   if (!listings || listings.length === 0) {
     return (
       <EmptyState
-        title="No properties found"
-        subtitle="Looks like you have no properties."
+        title="No se encontraron propiedades"
+        subtitle="Parece que no tienes propiedades."
       />
     );
   }
 
   return (
     <section className="main-container">
-      <Heading title="Properties" subtitle="List of your properties" backBtn/>
+      <Heading title="Propiedades" subtitle="Lista de tus propiedades" backBtn/>
       <div className=" mt-8 md:mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 md:gap-8 gap-4">
-        {listings.map((listing) => {
+        {listings.map((listing: { id: React.Key | null | undefined; }) => {
           const hasFavorited = favorites.includes(listing.id);
           return (
             <ListingCard

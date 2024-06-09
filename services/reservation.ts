@@ -117,11 +117,11 @@ export const deleteReservation = async (reservationId: string) => {
     const currentUser = await getCurrentUser();
 
     if (!currentUser) {
-      throw new Error("Unauthorized");
+      throw new Error("No autorizado");
     }
 
     if (!reservationId || typeof reservationId !== "string") {
-      throw new Error("Invalid ID");
+      throw new Error("ID inválido");
     }
 
 
@@ -132,7 +132,7 @@ export const deleteReservation = async (reservationId: string) => {
     });
 
     if (!reservation) {
-      throw new Error("Reservation not found!");
+      throw new Error("¡Reserva no encontrada!");
     }
 
     await db.reservation.deleteMany({

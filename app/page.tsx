@@ -28,7 +28,7 @@ const Home: FC<HomeProps> = async ({ searchParams }) => {
 
   return (
     <section className=" main-container pt-16 grid  grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8">
-      {listings.map((listing) => {
+      {listings.map((listing: { id: React.Key | null | undefined; }) => {
         const hasFavorited = favorites.includes(listing.id);
         return (
           <ListingCard

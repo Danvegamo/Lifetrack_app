@@ -146,6 +146,7 @@ const WindowHeader: FC<WindowHeaderProps> = ({ title }) => {
         type="button"
         className=" p-1 border-0  hover:opacity-70 transition absolute left-6"
         onClick={close}
+        title="Cerrar"
       >
         <IoMdClose size={18} />
       </button>

@@ -4,8 +4,11 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 233, 246, 252; /* Azul claro */
+  --background-end-rgb: 255, 255, 255; /* Blanco */
+  --primary-color-rgb: 0, 123, 255; /* Azul para botones */
+  --secondary-color-rgb: 34, 193, 195; /* Verde-azul para acentos */
+  --accent-color-rgb: 253, 187, 45; /* Amarillo para acentos */
 }
 
 @media (prefers-color-scheme: dark) {

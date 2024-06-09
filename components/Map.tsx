@@ -18,13 +18,14 @@ L.Icon.Default.mergeOptions({
 
 interface MapProps {
   center?: number[];
+  zoomLevel?: number; // Añadido para permitir un nivel de zoom personalizado
 }
 
-const Map: React.FC<MapProps> = ({ center }) => {
+const Map: React.FC<MapProps> = ({ center, zoomLevel }) => {
   return (
     <MapContainer
-      center={(center as L.LatLngExpression) || [52, -0.09]}
-      zoom={center ? 4 : 2}
+      center={(center as L.LatLngExpression) || [4.7110, -74.0721]} // Coordenadas por defecto de Bogotá
+      zoom={zoomLevel || (center ? 13 : 10)} // Nivel de zoom predeterminado ajustado
       scrollWheelZoom={false}
       className={`h-full rounded-lg`}
     >

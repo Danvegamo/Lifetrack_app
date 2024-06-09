@@ -1,0 +1,116 @@
+[
+  {
+    "value": "CH",
+    "label": "Chapinero",
+    "latlng": [4.653, -74.057],
+    "region": "Bogotá"
+  },
+  {
+    "value": "US",
+    "label": "Usaquén",
+    "latlng": [4.76, -74.03],
+    "region": "Bogotá"
+  },
+  {
+    "value": "TE",
+    "label": "Teusaquillo",
+    "latlng": [4.648, -74.084],
+    "region": "Bogotá"
+  },
+  {
+    "value": "SU",
+    "label": "Suba",
+    "latlng": [4.75, -74.1],
+    "region": "Bogotá"
+  },
+  {
+    "value": "SA",
+    "label": "Santa Fe",
+    "latlng": [4.61, -74.07],
+    "region": "Bogotá"
+  },
+  {
+    "value": "EN",
+    "label": "Engativá",
+    "latlng": [4.708, -74.115],
+    "region": "Bogotá"
+  },
+  {
+    "value": "KE",
+    "label": "Kennedy",
+    "latlng": [4.63, -74.14],
+    "region": "Bogotá"
+  },
+  {
+    "value": "BO",
+    "label": "Bosa",
+    "latlng": [4.624, -74.185],
+    "region": "Bogotá"
+  },
+  {
+    "value": "CI",
+    "label": "Ciudad Bolívar",
+    "latlng": [4.537, -74.156],
+    "region": "Bogotá"
+  },
+  {
+    "value": "RA",
+    "label": "Rafael Uribe Uribe",
+    "latlng": [4.576, -74.11],
+    "region": "Bogotá"
+  },
+  {
+    "value": "PU",
+    "label": "Puente Aranda",
+    "latlng": [4.629, -74.11],
+    "region": "Bogotá"
+  },
+  {
+    "value": "AN",
+    "label": "Antonio Nariño",
+    "latlng": [4.595, -74.1],
+    "region": "Bogotá"
+  },
+  {
+    "value": "MA",
+    "label": "Martires",
+    "latlng": [4.613, -74.087],
+    "region": "Bogotá"
+  },
+  {
+    "value": "TO",
+    "label": "Tunjuelito",
+    "latlng": [4.579, -74.135],
+    "region": "Bogotá"
+  },
+  {
+    "value": "BA",
+    "label": "Barrios Unidos",
+    "latlng": [4.674, -74.08],
+    "region": "Bogotá"
+  },
+  {
+    "value": "CU",
+    "label": "Candelaria",
+    "latlng": [4.602, -74.073],
+    "region": "Bogotá"
+  },
+  {
+    "value": "SA",
+    "label": "San Cristóbal",
+    "latlng": [4.589, -74.09],
+    "region": "Bogotá"
+  },
+  {
+    "value": "SO",
+    "label": "Sumapaz",
+    "latlng": [4.083, -74.267],
+    "region": "Bogotá"
+  },
+  {
+    "value": "US",
+    "label": "Usme",
+    "latlng": [4.469, -74.12],
+    "region": "Bogotá"
+  }
+]

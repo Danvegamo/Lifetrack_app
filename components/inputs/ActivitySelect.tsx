@@ -1,23 +1,23 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Select from "react-select";
-import sectors from "@/data/sectors.json"; // Asegúrate de que la ruta es correcta
+import activities from "@/data/activities.json"; // Asegúrate de que la ruta es correcta
 
-export type SectorSelectValue = {
+export type ActivitySelectValue = {
   label: string;
   latlng: number[];
   region: string;
   value: string;
 };
 
-const SectorSelect = ({
+const ActivitySelect = ({
   value,
   onChange,
   options,
 }: {
-  value?: SectorSelectValue;
-  onChange: (name: string, val: SectorSelectValue) => void;
-  options: SectorSelectValue[];
+  value?: ActivitySelectValue;
+  onChange: (name: string, val: ActivitySelectValue) => void;
+  options: ActivitySelectValue[];
 }) => {
   const ref = useRef<any>(null);
 
@@ -29,14 +29,14 @@ const SectorSelect = ({
     return () => clearTimeout(timer);
   }, []);
 
-  const handleChange = (value: SectorSelectValue) => {
+  const handleChange = (value: ActivitySelectValue) => {
     onChange("location", value);
   };
 
   return (
     <Select
       ref={ref}
-      placeholder="Selecciona un sector"
+      placeholder="Selecciona una categoría"
       isClearable
       options={options}
       value={value}
@@ -44,7 +44,7 @@ const SectorSelect = ({
       formatOptionLabel={(option: any) => (
         <div className="flex flex-row items-center gap-3 z-[10]">
           <div>
-            {option.label},
+            {option.label}
             <span className="text-neutral-500 ml-1">{option.region}</span>
           </div>
         </div>
@@ -67,4 +67,4 @@ const SectorSelect = ({
   );
 };
 
-export default SectorSelect;
+export default ActivitySelect;

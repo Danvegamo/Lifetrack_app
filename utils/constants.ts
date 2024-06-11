@@ -1,79 +1,33 @@
-import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
-import {
-  GiBarn,
-  GiBoatFishing,
-  GiCactus,
-  GiCastle,
-  GiCaveEntrance,
-  GiForestCamp,
-  GiIsland,
-  GiWindmill,
-} from "react-icons/gi";
-import { FaSkiing } from "react-icons/fa";
-import { BsSnow } from "react-icons/bs";
-import { IoDiamond } from "react-icons/io5";
-import { MdOutlineVilla } from "react-icons/md";
+import { FaFire, FaUsers, FaMapMarkerAlt } from "react-icons/fa";
+import { TbPlant2 } from "react-icons/tb";
+import { MdSportsKabaddi } from "react-icons/md";
 
-import { FaRunning, FaSpa, FaDumbbell, FaMountain, FaLeaf } from "react-icons/fa";
-import { GiMeditation, GiFruitBowl, GiCycling } from "react-icons/gi";
-import { GrYoga } from "react-icons/gr";
-import { MdOutlineSportsHandball, MdOutlineLocalGroceryStore } from "react-icons/md";
 
 export const categories = [
   {
-    label: "Actividades Físicas",
-    icon: FaRunning,
-    description: "¡Descubre actividades físicas para mantenerte en forma!",
+    label: "Populares",
+    icon: FaFire,
+    description: "¡Encuentra las actividades más populares!",
   },
   {
-    label: "Meditación",
-    icon: GiMeditation,
-    description: "¡Encuentra sesiones de meditación para tu bienestar mental!",
+    label: "Deportes",
+    icon: MdSportsKabaddi,
+    description: "¡Descubre actividades deportivas!",
   },
   {
-    label: "Ciclismo",
-    icon: GiCycling,
-    description: "¡Explora rutas y actividades de ciclismo!",
+    label: "En parche",
+    icon: FaUsers,
+    description: "¡Únete a actividades en grupo!",
   },
   {
-    label: "Gimnasio",
-    icon: FaDumbbell,
-    description: "¡Accede a los mejores gimnasios de la ciudad!",
+    label: "Mental",
+    icon: TbPlant2,
+    description: "¡Encuentra actividades para tu bienestar mental!",
   },
   {
-    label: "Yoga",
-    icon: GrYoga,
-    description: "¡Participa en clases de yoga para relajarte y fortalecer tu cuerpo!",
-  },
-  {
-    label: "Senderismo",
-    icon: FaMountain,
-    description: "¡Descubre rutas de senderismo en Bogotá!",
-  },
-  {
-    label: "Nutrición",
-    icon: GiFruitBowl,
-    description: "¡Encuentra asesoramiento nutricional y dietas saludables!",
-  },
-  {
-    label: "Deportes en Equipo",
-    icon: MdOutlineSportsHandball,
-    description: "¡Únete a actividades deportivas en equipo!",
-  },
-  {
-    label: "Spa y Relajación",
-    icon: FaSpa,
-    description: "¡Disfruta de spas y actividades de relajación!",
-  },
-  {
-    label: "Naturaleza",
-    icon: FaLeaf,
-    description: "¡Conéctate con la naturaleza en actividades al aire libre!",
-  },
-  {
-    label: "Compras Saludables",
-    icon: MdOutlineLocalGroceryStore,
-    description: "¡Encuentra los mejores lugares para comprar productos saludables!",
+    label: "Cerca a mí",
+    icon: FaMapMarkerAlt,
+    description: "¡Explora actividades cerca de tu ubicación!",
   },
 ];
 

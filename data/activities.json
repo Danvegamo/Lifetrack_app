@@ -1,0 +1,32 @@
+[
+  {
+    "value": "populares",
+    "label": "Populares",
+    "latlng": [4.710988599, -74.072092],
+    "region": "Bogotá"
+  },
+  {
+    "value": "deportes",
+    "label": "Deportes",
+    "latlng": [4.710988599, -74.072092],
+    "region": "Bogotá"
+  },
+  {
+    "value": "en_parche",
+    "label": "En Parche",
+    "latlng": [4.710988599, -74.072092],
+    "region": "Bogotá"
+  },
+  {
+    "value": "mental",
+    "label": "Mental",
+    "latlng": [4.710988599, -74.072092],
+    "region": "Bogotá"
+  },
+  {
+    "value": "cerca_a_mi",
+    "label": "Cerca a Mí",
+    "latlng": [4.710988599, -74.072092],
+    "region": "Bogotá"
+  }
+]
